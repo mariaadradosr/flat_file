@@ -1,7 +1,7 @@
 import pandas as pd
 
 def llam_1414(path, files, sheet, header, cols, col_names):
-    df = pd.read_excel(path+files[0],sheet_name = sheet, header=header)
+    df = pd.read_excel(path+files,sheet_name = sheet, header=header)
     # Definción de qué filas hay que quitar, aquéllas que no tengan formato fecha
     rows_to_drop = [e for e in range(len(df)) if type(df.iloc[e,0]) != pd.Timestamp ]
     df = df.drop(rows_to_drop)
@@ -13,7 +13,7 @@ def llam_1414(path, files, sheet, header, cols, col_names):
 
 
 def teleweb(path, files, sheet, header, cols, col_names):
-    df = pd.read_excel(path+files[0],sheet_name = sheet, header=header)
+    df = pd.read_excel(path+files,sheet_name = sheet, header=header)
     # Definción de qué filas hay que quitar, aquéllas que no tengan formato fecha
     rows_to_drop = [e for e in range(len(df)) if type(df.iloc[e,0]) != pd.Timestamp ]
     df = df.drop(rows_to_drop)
