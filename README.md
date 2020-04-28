@@ -1,9 +1,9 @@
-## Decripción 
+## Descripción 
 Programa escrito en python para aplanar el fichero de llamadas Orange
 
 ## Modulos python:
 - pandas
-- os
+- xlrd (mac)
 
 ## Archivos:
 - `static.py` contiene los siguientes elementos:
