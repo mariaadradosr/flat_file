@@ -38,7 +38,9 @@ Para ejecutar el programa nos situaremos en la carpeta raiz a través del termin
     - transf_llam_netas (transferencias)
     - est_llam_netas
     - tot_llam_netas
+    - est_vtas_movil
     - vtas_movil
+    - est_vtas_fijo
     - vtas_fijo
     - sheet (dimensión que permite diferenciar entre empresa y residencial)
     - radio_llam_netas
@@ -46,7 +48,11 @@ Para ejecutar el programa nos situaremos en la carpeta raiz a través del termin
     - fecha
     - est_llam_netas
     - tot_llam_netas
+    - est_vtas_movil_tot (tw + web + dist. online)
+    - vtas_mov_tot (tw + web + dist. online)
     - vtas_movil_tw
+    - est_vtas_fijo_tot (tw + web + dist. online)
+    - vtas_fijo_tot (tw + web + dist. online)
     - vtas_fijo_tw
     - vtas_movil_web
     - vtas_fijo_web
