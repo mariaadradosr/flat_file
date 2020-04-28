@@ -1,6 +1,6 @@
 # Columnas por pestaña que mantenemos en el archivo final
 res_1414_cols_to_keep = [0, 5, 13, 22, 23, 24, 25, 26, 29, 37, 38, 49, 50, 53, 54]
-emp_1414_cols_to_keep = [0, 1, 7, 12, 17, 19, 19, 20, 23, 24, 27]
+emp_1414_cols_to_keep = [0, 1, 7, 12, 16, 17, 19, 20, 23, 24, 26, 27]
 res_tw_cols_to_keep = [0, 1, 2, 13, 16, 17, 19, 21, 22]
 emp_tw_cols_to_keep = [0, 1, 2, 5, 8, 9, 11, 13, 14]
 
@@ -28,6 +28,7 @@ emp_1414_cols = {
     'Llam. Netas': 'conv_llam_netas',
     'Llamadas Netas': 'aaee_llam_netas',
     'Llamadas': 'radio_llam_netas',
+    'Envíos' : 'sms_envios',
     'Total Llamadas': 'sms_llam_netas',
     'Est. Llam. Netas': 'est_llam_netas',
     'Llam. Netas.1': 'tot_llam_netas',
