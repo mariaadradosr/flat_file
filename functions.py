@@ -1,15 +1,27 @@
-res_1414 = {
-'FECHA':'fecha',
- 'Llam. Netas':'conv_llam_netas',
- 'Llam. Netas.1': 'aaee_llam_netas',
- 'Envíos': 'mail_envios',
- 'Llam. Netas.2':'mail_llam_netas' ,
- 'Llamadas':'carrefour_llam_netas',
- 'Envíos.1':'sms_envios',
- 'Total Llamadas':'sms_llam_netas',
- 'Total Llamadas.1':'transf_llam_netas',
- 'Est. Llam. Netas':'est_llam_netas',
- 'Llam. Netas.3':'tot_llam_netas',
- 'Real Móvil':'vtas_movil',
- 'Real Fijo':'vtas_fijo'
-}
+import pandas as pd
+
+def llam_1414(path, files, sheet, header, cols, col_names):
+    df = pd.read_excel(path+files[0],sheet_name = sheet, header=header)
+    # Definción de qué filas hay que quitar, aquéllas que no tengan formato fecha
+    rows_to_drop = [e for e in range(len(df)) if type(df.iloc[e,0]) != pd.Timestamp ]
+    df = df.drop(rows_to_drop)
+    df = df[df.columns[cols]].fillna(0)
+    df.rename(columns = col_names, inplace=True)
+    df.iloc[:,1:] = df.iloc[:,1:].astype('float64')
+    df['sheet'] = sheet
+    return df
+
+
+def teleweb(path, files, sheet, header, cols, col_names):
+    df = pd.read_excel(path+files[0],sheet_name = sheet, header=header)
+    # Definción de qué filas hay que quitar, aquéllas que no tengan formato fecha
+    rows_to_drop = [e for e in range(len(df)) if type(df.iloc[e,0]) != pd.Timestamp ]
+    df = df.drop(rows_to_drop)
+    df = df[df.columns[cols]].fillna(0)
+    df.rename(columns = col_names, inplace=True)
+    df.iloc[:,1:] = df.iloc[:,1:].astype('float64')
+    df['vtas_movil_web'] = df['vtas_movil_tw_web']-df['vtas_movil_tw']
+    df['vtas_fijo_web'] = df['vtas_fijo_tw_web']-df['vtas_fijo_tw']
+    df.drop(columns = ['vtas_movil_tw_web','vtas_fijo_tw_web'],inplace = True)
+    df['sheet'] = sheet 
+    return df
