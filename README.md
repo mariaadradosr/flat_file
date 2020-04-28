@@ -1,7 +1,7 @@
 ## Descripción 
 Programa escrito en python para aplanar el fichero de seguimiento de llamadas de Orange.
 
-## Modulos python:
+## Requisitos:
 - pandas
 - xlrd (mac)
 
