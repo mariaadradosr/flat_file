@@ -2,6 +2,7 @@
 res_1414_cols_to_keep = [0, 5, 13, 22, 23, 24, 25, 26, 29, 37, 38, 49, 50, 53, 54]
 emp_1414_cols_to_keep = [0, 1, 7, 12, 16, 17, 19, 20, 23, 24, 26, 27]
 res_tw_cols_to_keep = [0, 1, 2, 13, 14, 16, 17, 18, 19, 21, 22]
+# res_tw_cols_to_keep = [0, 1, 2, 13, 14, 16, 17, 18, 19, 21, 23, 24]
 emp_tw_cols_to_keep = [0, 1, 2, 5, 6, 8, 9, 10 , 11, 13, 14]
 
 # Mapeo nombre columnas
@@ -52,3 +53,18 @@ res_tw_cols = {
     'Real Teleweb.1': 'vtas_fijo_tw',
     'Real Teleweb+Web.1': 'vtas_fijo_tw_web'
 }
+
+emp_tw_cols = {
+    'FECHA': 'fecha',
+    'Estimación': 'est_llam_netas',
+    'REALES': 'tot_llam_netas',
+    'Estimación Total Canal Online':'est_vtas_movil_tot',
+    'Real Total Canal Online': 'vtas_mov_tot',
+    'Real Teleweb': 'vtas_movil_tw',
+    'Real Teleweb+Web': 'vtas_movil_tw_web',
+    'Estimación Total Canal Online.1':'est_vtas_fijo_tot',
+    'Real Total Canal Online.1': 'vtas_fijo_tot',
+    'Real Teleweb.1': 'vtas_fijo_tw',
+    'Real Teleweb+Web.1': 'vtas_fijo_tw_web'
+}
+

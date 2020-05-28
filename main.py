@@ -23,7 +23,7 @@ def main():
     print('1414 Total csv exported ok')
     print('\nCreating Tw_Total: Teleweb Residencial + Teleweb Empresas')
     res_tw = functions.teleweb(path=input_path, files=files, sheet='Teleweb Residencial', header=6, cols = static.res_tw_cols_to_keep, col_names=static.res_tw_cols)
-    emp_tw = functions.teleweb(path=input_path, files=files, sheet='Teleweb Empresas', header=6, cols = static.emp_tw_cols_to_keep, col_names=static.res_tw_cols)
+    emp_tw = functions.teleweb(path=input_path, files=files, sheet='Teleweb Empresas', header=6, cols = static.emp_tw_cols_to_keep, col_names=static.emp_tw_cols)
     tot_tw = pd.concat([res_tw,emp_tw],axis = 0,join ='outer',ignore_index = True, sort= False).fillna(0)
     tot_tw.to_csv(f'{output_path}tot_tw_{month}_{year}.csv', decimal=",",encoding='CP1252',index=False)
     print('Teleweb Total csv exported ok')
